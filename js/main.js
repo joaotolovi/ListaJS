@@ -26,45 +26,68 @@ function showData() {
   out.append(text)
 }
 function insertElement() {
+  //pega o valor a ser inserido
   const valStr = prompt('digite um valor a ser inserido:')
   try {
+    //converte o valor de string para float
     const val = parseFloat(valStr)
+    //insere o elemento
     list.append(val)
+    //atualiza a lista interface
     showData()
   } catch (error) {
+    //se der erro, exibe o erro
     showErroMessage(error.message)
   }
 }
 function insertElementAt() {
+  //pega o valor a ser inserido
   let valStr = prompt('digite um valor a ser inserido:')
+  //pega a posição a ser inserido
   let posStr = prompt('digite uma posição a inserir:')
 
   try {
+    //converte o valor de string para float
     const val = parseFloat(valStr)
+    //converte a posição de string para inteiro
     const pos = parseInt(posStr)
+    //insere o elemento
     list.insert(pos, val)
+    //atualiza a lista interface
     showData()
   } catch (error) {
+    //se der erro, exibe o erro
     showErroMessage(error.message)
   }
 }
 function removeElement() {
+  //pega o valor a ser removido
   let valStr = prompt('digite um valor a ser removido:')
   try {
+    //converte o valor de string para float
+    //para validar
     const val = parseFloat(valStr)
+    //remove o elemento
     list.remove(val)
+    //atualiza a lista interface
     showData()
   } catch (error) {
+    //se der erro, exibe o erro
     showErroMessage(error.message)
   }
 }
 function removeElementAt() {
+  //pega a posição a ser removida
   let posStr = prompt('digite uma posição a remover:')
   try {
+    //converte a posição de string para inteiro
     const pos = parseInt(posStr)
+    //remove o elemento
     list.removeAt(pos)
+    //atualiza a lista interface
     showData()
   } catch (error) {
+    //se der erro, exibe o erro
     showErroMessage(error.message)
   }
 }
